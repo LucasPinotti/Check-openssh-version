@@ -7,4 +7,4 @@
 - name: Mostrar versión de OpenSSH
   debug:
     msg: "La versión de OpenSSH en {{ inventory_hostname }} es {{ ssh_version_output.stderr_lines[0] }}"
-  when: ssh_version_output.stderr is defined and ('OpenSSH_8.5p1' in ssh_version_output.stderr or 'OpenSSH_4.' in ssh_version_output.stderr)
+  when: ssh_version_output.stderr is defined and ('OpenSSH_8.5p1' in ssh_version_output.stderr or 'OpenSSH_4.' in ssh_version_output.stderr or 'OpenSSH_3.' in ssh_version_output.stderr or 'OpenSSH_2.' in ssh_version_output.stderr or 'OpenSSH_1.' in ssh_version_output.stderr)
