@@ -1,0 +1,17 @@
+---
+  all:
+    hosts:
+ 
+    children:
+      Monitoreo-Server:
+        hosts:
+          Monitoreo-Server-01:
+            ansible_host: 192.168.1.4
+            ansible_user: sysadmin
+
+      Web-Server:
+        hosts:
+          Web-Server-01:
+            ansible_host: 192.168.1.10
+            node_name: vm-ubuntu-02
+            ansible_user: sysadmin
